@@ -15,10 +15,9 @@ class Session{
 
     public function login($user)
     {
-        if ($user) {
-            $this->user_id = $_SESSION['user_id'] = $user;
+            $_SESSION['user_id'] = $user;
+            $this->user_id = $_SESSION['user_id'] ;
             $this->signed_in = true;
-        }
     }
     public function logout()
     {
@@ -34,7 +33,7 @@ class Session{
             $this->signed_in = true;
         } else {
             unset($this->user_id);
-            $this->signed_in = false;
+            $this->signed_in = true;
         }
     }
 }

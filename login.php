@@ -35,9 +35,9 @@
             $name = "";
             $passwords = "";
         }
-        echo $the_message;
+        // echo $_SESSION['user_id'];
     }
-    // echo $_SESSION['user_id'] ;
+    echo $_SESSION['user_id'] ;
 ?>
 <html class="login">
 
